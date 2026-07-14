@@ -101,11 +101,18 @@ a {
   background: var(--panel-soft);
 }
 
-.project-card img {
+.project-image-link img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.project-card .project-github img {
+  width: 22px;
+  height: 22px;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 .project-body {
@@ -284,7 +291,7 @@ a {
     gap: 14px;
   }
 
-  .project-card img {
+  .project-image-link img {
     aspect-ratio: 16 / 7;
   }
 
