@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Pulse and Decoherence - Amiel Paz</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="project-page">
+    <a class="back-link" href="../index.html">Home</a>
+
+    <header class="project-header">
+      <div class="project-kicker">Visualization and Quantum Dynamics</div>
+      <h1>Model Pulse and Decoherence</h1>
+    </header>
+
+    <section class="project-animation-grid" data-synced-gifs aria-label="Model pulse animations">
+      <figure class="project-animation-panel">
+        <img src="../assets/projects/modelpulseanddecoherence.png" data-src="../assets/projects/modelpulseanddecoherence-finite.gif" alt="Finite pulse simulation with Wigner densities, potentials, and laser pulse envelope">
+        <figcaption>Finite pulse</figcaption>
+      </figure>
+      <figure class="project-animation-panel">
+        <img src="../assets/projects/modelpulseanddecoherence.png" data-src="../assets/projects/modelpulseanddecoherence-continuous.gif" alt="Continuous wave simulation with Wigner densities, potentials, and laser field">
+        <figcaption>Continuous wave</figcaption>
+      </figure>
+    </section>
+
+    <script>
+      (() => {
+        const grid = document.querySelector("[data-synced-gifs]");
+        if (!grid) return;
+        const images = Array.from(grid.querySelectorAll("img[data-src]"));
+        const preload = images.map((image) =>
+          new Promise((resolve) => {
+            const loader = new Image();
+            loader.onload = resolve;
+            loader.onerror = resolve;
+            loader.src = image.dataset.src;
+          })
+        );
+        Promise.all(preload).then(() => {
+          images.forEach((image) => {
+            image.src = image.dataset.src;
+          });
+        });
+      })();
+    </script>
+
+    <nav class="project-page-links" aria-label="Project links">
+      <a class="project-github" href="https://github.com/amiel-paz/ModelPulseAndDecoherence" aria-label="Open Model Pulse and Decoherence GitHub repository">
+        <img src="../assets/github-mark.svg" alt="">
+      </a>
+    </nav>
+
+    <section class="project-section">
+      <h2>What is it?</h2>
+      <p>To be written...</p>
+    </section>
+
+    <section class="project-section">
+      <h2>How was it built?</h2>
+      <p>To be written...</p>
+    </section>
+  </main>
+</body>
+</html>
