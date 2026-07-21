@@ -159,6 +159,14 @@ a {
   line-height: 1.58;
 }
 
+.project-body .project-updated {
+  margin-top: 12px;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 .credit-legend {
   position: fixed;
   right: 18px;
