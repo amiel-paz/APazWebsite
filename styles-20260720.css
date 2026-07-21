@@ -30,7 +30,7 @@ a {
 .portfolio-shell {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 42px 22px 190px;
+  padding: 42px 22px 220px;
 }
 
 .intro {
@@ -320,7 +320,7 @@ a {
 
 @media (max-width: 700px) {
   .portfolio-shell {
-    padding: 20px 14px 210px;
+    padding: 20px 14px 240px;
   }
 
   .intro {
